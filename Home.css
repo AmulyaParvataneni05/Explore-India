@@ -1,0 +1,81 @@
+body {
+  background-color: #E0F7F8;
+}
+.Final-101 {
+  margin-top: 20px;
+  row-gap: 40px;
+}
+h1 {
+  font-size: 2rem;
+}
+
+.Final-101, .Final-102, .Final-103 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Media Queries */
+
+/* Small screens (max-width: 600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .Final-101, .Final-102, .Final-103 {
+    flex-direction: column;
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Medium screens (max-width: 900px) */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .Final-101, .Final-102, .Final-103 {
+    flex-direction: row;
+    gap: 30px; /* Adjust gap for medium screens */
+  }
+
+  .container {
+    padding: 15px; /* Adjust padding for medium screens */
+  }
+}
+
+/* Large screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .Final-101, .Final-102, .Final-103 {
+    gap: 40px; /* Keep larger gap for larger screens */
+  }
+
+  .container {
+    padding: 20px; /* Keep original padding for larger screens */
+  }
+}
+
+/* Extra large screens (min-width: 1201px) */
+@media (min-width: 1201px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .Final-101, .Final-102, .Final-103 {
+    gap: 50px; /* Increase gap for extra large screens */
+  }
+
+  .container {
+    padding: 30px; /* Increase padding for extra large screens */
+  }
+}
