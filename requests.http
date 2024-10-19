@@ -1,0 +1,58 @@
+get http://localhost:5000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGI5OGI5ZWYzZDBmNDg1NzNjMGE0YyIsImlhdCI6MTcyODgxMzM4OSwiZXhwIjoxNzI4ODE2OTg5fQ.nN0-C2_v-foBq_9O5HUGHx7v3gGpHRbYWfNswcVt2d4
+
+
+
+
+###
+get http://localhost:5000/user-api/users/Amulya2005
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGI5OGI5ZWYzZDBmNDg1NzNjMGE0YyIsImlhdCI6MTcyODgxMzM4OSwiZXhwIjoxNzI4ODE2OTg5fQ.nN0-C2_v-foBq_9O5HUGHx7v3gGpHRbYWfNswcVt2d4
+
+
+
+###
+post http://localhost:5000/user-api/user
+Content-Type: application/json
+
+{
+    "fullname":"ViratKohli",
+    "username":"ViratKohli",
+    "password":"Amulya2005",
+    "email":"Amulya2005@gmail.com"
+}
+
+###
+post http://localhost:5000/user-api/login
+Content-Type: application/json
+
+{
+    "username":"Amulya2005",
+    "password":"Amulya2005"
+}
+
+
+
+### Add to favorites (protected route)
+POST http://localhost:5000/user-api/add-to-favorites
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGJhMjcwMWFhODM1ZmMxYzRjOTU0ZCIsInVzZXJuYW1lIjoiQW11bHlhMjAwNSIsImlhdCI6MTcyODgxNjk5NywiZXhwIjoxNzI4ODIwNTk3fQ.UH4oRSyCWADVRGhYdGQpjw7C5LmrP1EorOgqrlKMWAE
+Content-Type: application/json
+
+{
+    "place": {
+        "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMU_oocNVuvoaUtumr1c52ce3A__X2Vogirg&s",
+        "title": "Tawang Monastery",
+        "location": "Tawang",
+        "bookUrl": "https://www.trivago.in/en-IN/lm/hotels-tawang-india?search=200-426072;dr-20240907-20240908",
+        "locateUrl": "https://www.google.com/maps/place/Tawang+Monastery/@27.5867289,91.8568469,18z/data=!3m1!4b1!4m6!3m5!1s0x375cf5a73c4189b9:0x62f60b408839e67e!8m2!3d27.5867261!4d91.8577194!16s%2Fm%2F07s3s15?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+    }
+}
+
+###
+GET http://localhost:5000/user-api/favorites
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGJhMjcwMWFhODM1ZmMxYzRjOTU0ZCIsInVzZXJuYW1lIjoiQW11bHlhMjAwNSIsImlhdCI6MTcyODgxNzMxMSwiZXhwIjoxNzI4ODIwOTExfQ.TOF0gwGFMZZdMPCSweVerzOdX5dFFdC0nDSSZJgn05E
+Content-Type: application/json
+
+###
+GET http://localhost:5000/user-api/favorites/Amulya2005
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGJhMjcwMWFhODM1ZmMxYzRjOTU0ZCIsInVzZXJuYW1lIjoiQW11bHlhMjAwNSIsImlhdCI6MTcyODgxNzMxMSwiZXhwIjoxNzI4ODIwOTExfQ.TOF0gwGFMZZdMPCSweVerzOdX5dFFdC0nDSSZJgn05E
+Content-Type: application/json
