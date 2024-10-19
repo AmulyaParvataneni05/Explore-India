@@ -1,0 +1,70 @@
+body{
+    background: rgb(255, 200, 247);
+    background: linear-gradient(45deg, rgba(255, 200, 247, 1) 0%, rgba(255, 235, 205, 1) 100%);
+}
+.Places, .CultureTradition,.Cuisine, .WildLife, .Shopping, .Historical {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.heading{
+    font-size: 2.5rem;
+    color:  #ff1d58;
+    text-decoration: underline;
+    text-align: center;
+}
+.capital{
+    font-size: 2rem;
+    color:  #0049B7;
+    text-align: center;
+}
+.sideheadings{
+    text-align: center;
+    color: blue;
+}
+/* For mobile devices */
+@media (max-width: 600px) {
+    .Places, .CultureTradition,.Cuisine, .WildLife, .Shopping, .Historical{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        margin: 10px 0; /* Add some margin for spacing */
+    }
+}
+
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .Places, .CultureTradition,.Cuisine, .WildLife, .Shopping, .Historical {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    h1 {
+        font-size: 2.5rem; /* Slightly larger font size for tablets */
+        margin: 15px 0;
+    }
+}
+
+
+/* For desktops (default) */
+@media (min-width: 901px) {
+    .Places, .CultureTradition,.Cuisine, .WildLife, .Shopping, .Historical {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    h1 {
+        font-size: 2.5rem; /* Default font size */
+        margin: 20px 0;
+    }
+}
+
+

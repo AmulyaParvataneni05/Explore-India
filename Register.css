@@ -1,0 +1,129 @@
+/* Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: rgb(255, 200, 247);
+    background: linear-gradient(45deg, rgba(255, 200, 247, 1) 0%, rgba(255, 235, 205, 1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Card */
+.register-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.register-card::before {
+    content: '';
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+
+.register-card:hover::before {
+    transform: scale(1.2);
+    background: rgba(0, 123, 255, 0.3);
+}
+
+.register-card h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+    font-size: 1rem;
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+
+/* Placeholder */
+.form-control::placeholder {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+
+/* Button */
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn-block:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+
+/* Smaller screens */
+@media (max-width: 576px) {
+    .register-card {
+        padding: 30px;
+        margin-top: -40px;
+    }
+
+
+    .btn-block {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
